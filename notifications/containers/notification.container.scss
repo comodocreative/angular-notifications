@@ -1,0 +1,65 @@
+/**
+ * "notification" container
+ */
+
+@import '../../../scss/abstracts/logger';
+@import '../../../scss/abstracts/variables';
+@import '../../../scss/abstracts/functions';
+@import '../../../scss/abstracts/mixins';
+
+:host {
+    display: block;
+    height: 1px;
+    overflow: visible;
+    position: absolute;
+    right: 1em;
+    top: $unit * 8;
+    width: $unit * 24;
+    z-index: 999999;
+}
+
+.notification__item {
+    background-color: rgba( $concrete, 0.8 );
+    border: 1px solid $concrete--dark;
+    border-radius: $unit / 2;
+    box-shadow: 0 1px $unit #999;
+    color: #fff;
+    font-weight: lighter;
+    margin-bottom: 1em;
+    padding: 0.4em 0.8em;
+    position: relative;
+    text-shadow: 0 1px 3px #333;
+    width: 100%;
+
+    strong {
+        display: block;
+    }
+
+    &--alert {
+        background-color: rgba( $sunflower, 0.8 );
+        border-color: $sunflower--dark;
+    }
+
+    &--info {
+        background-color: rgba( $curiousBlue, 0.8 );
+        border-color: $curiousBlue--dark;
+    }
+
+    &--error {
+        background-color: rgba( $alizarin, 0.8 );
+        border-color: $alizarin--dark;
+    }
+
+    &--success {
+        background-color: rgba( $emerald, 0.8 );
+        border-color: $emerald--dark;
+    }
+
+}
+
+.notification__close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 0.4em;
+    right: 0.8em;
+}
